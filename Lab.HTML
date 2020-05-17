@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab1</title>
+
+    <style>
+        #left {
+            border: 1px solid #000000;
+            text-align: center;
+            padding: 3px;
+        }
+
+        #right {
+            border: 1px solid #000000;
+            text-align: center;
+            padding: 3px;
+
+        }
+
+        #sub1,
+        #sub2,
+        #sub3 {
+            border: 1px solid #000000;
+            text-align: center;
+            padding: 3px;
+
+        }
+        
+            
+       
+    </style>
+
+</head>
+
+<body>
+    <div>
+
+
+        <h1>
+            1.Attribute
+        </h1>
+        <!--ต้องอัพเดตความรู้เพิ่มบางหัวข้อไม่เข้าใจ-->
+        <table>
+            <thead>
+                <tr>
+                    <th id="left">Tag</th>
+                    <th id="right" colspan="3">Attribute</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="left">
+                        < h>
+                    </td>
+                    <td id="right" colspan="3"> <a href="#global">Global Attributes</a> และ <a href="#event">Event Attributes</a> </td>
+                </tr>
+                <td id="left">
+                    < p>
+                </td>
+                <td id="right" colspan="3"> <a href="#global"> Global Attributes</a> และ <a href="#event">Event Attributes</a></td>
+                </tr>
+                <tr>
+                    <td id="left">
+                        < div>
+                    </td>
+                    <td id="right" colspan="3"> <a href="#global"> Global Attributes</a> และ <a href="#event">Event Attributes</a></td>
+                </tr>
+                <tr>
+                    <td id="left" rowspan="14">
+                        < img>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td id="right" colspan="3"> <a href="#global"> Global Attributes</a> และ <a href="#event">Event Attributes</a></td>
+                </tr>
+                <tr>
+                    <td id="sub1">Attribute</td>
+                    <td id="sub2">value</td>
+                    <td id="sub3">คำอธิบาย</td>
+                </tr>
+                <tr>
+                    <td id="sub1">alt</td>
+                    <td id="sub2">ใส่คำบรรยายรูปภาพ
+                        (text)</td>
+                    <td id="sub3">ใช้ระบุคำอธิบายของรูปภาพ เมื่อรูปภาพไม่ถูก load จะแสดงคำอธิบายที่ระบุเอาไว้แทน</td>
+                </tr>
+                <tr>
+                    <td id="sub1">crossorigin</td>
+                    <td id="sub2">anonymous
+                        use-credentials</td>
+                    <td id="sub3">
+                        *เกินความเข้าใจของผมไปหน่อยขอละไว้ก่อนนะครับ(ผมไม่มีความรู้เรื่องหลังบ้านสักนิดเดียวเลยครับ)
+                    </td>
+                    <!--รออัพเดตความรู้-->
+                </tr>
+                <tr>
+                    <td id="sub1">height</td>
+                    <td id="sub2">ขนาดความสูง</td>
+                    <td id="sub3">ใช้กำหนดความสูงของรูปภาพ</td>
+                </tr>
+                <tr>
+                    <td id="sub1">ismap</td>
+                    <td id="sub2">ismap</td>
+                    <td id="sub3">ใช้เปิด url หรือเรียกเอกสารตามจุดที่กำหนดไว้บนรูปภาพ</td>
+                </tr>
+                <tr>
+                    <td id="sub1">longdesc
+                        (html5ไม่สนับสนุน)</td>
+                    <td id="sub2">ใส่ url </td>
+                    <td id="sub3">ใช้ให้ข้อมูลเกี่ยวกับรูปภาพโดยจะเป็น url เพื่อให้ข้อมูลของรูปภาพ</td>
+                </tr>
+                <tr>
+                    <td id="sub1">referrerpolicy</td>
+                    <td id="sub2">no-referrer<br />
+                        no-referrer-when-downgrade<br />
+                        origin<br />
+                        origin-when-cross-origin<br />
+                        unsafe-url</td>
+                    <td id="sub3">
+                        *ขอละไว้ก่อนครับยังไม่เข้าใจเหมือนจะเป็นการเชื่อมหลายเรื่องที่ผมยังไม่เข้าใจเข้าด้วยกัน</td>
+                        <!--รออัพเดตความรู้-->
+                </tr>
+                <tr>
+                    <td id="sub1">size</td>
+                    <td id="sub2">ขนาดขอบเขตของรูปภาพ</td>
+                    <td id="sub3">ใช้ปรับขนาดของรูปภาพอย่างหยืดหยื่นตามขนาดของหน้า web page </td>
+                </tr>
+                <tr>
+                    <td id="sub1">src</td>
+                    <td id="sub2">ใส่ url </td>
+                    <td id="sub3">ใช้ภาพจาก url ที่ระบุ</td>
+                </tr>
+                <tr>
+                    <td id="sub1">srcset</td>
+                    <td id="sub2">ใส่ url</td>
+                    <td id="sub3">ใช้ภาพจาก url
+                        โดยจะเลือกใช้รูปในเวอร์ชั่นที่มีขนาดแตกต่างกันไปเพื่อให้มีความเหมาะสมกับขนาดของ device
+                        แต่ละเครื่อง</td>
+                </tr>
+                <tr>
+                    <td id="sub1">usemap</td>
+                    <td id="sub2">#ชื่อแผนที่</td>
+                    <td id="sub3">ใช้งานร่วมกับรูปภาพหรือรูปวัตถุที่คล้ายแผนที่ คือ มีพื้นที่ที่สามารถคลิกเพื่อใช้งานได้
+                    </td>
+                </tr>
+                <tr>
+                    <td id="sub1">width</td>
+                    <td id="sub2">ขนาดความกว้าง</td>
+                    <td id="sub3">ใช้กำหนดขนาดความกว้างของรูปภาพ</td>
+                </tr>
+                <tr>
+                    <td id="left" rowspan="12">
+                        < a>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="right" colspan="3"> <a href="#global"> Global Attributes </a> และ <a href="#event">Event Attributes</a></td>
+                </tr>
+                <tr>
+                    <td id="sub1">attribute</td>
+                    <td id="sub2">value</td>
+                    <td id="sub3">คำอธิบาย</td>
+                </tr>
+                <tr>
+                    <td id="sub1">download</td>
+                    <td id="sub2">ชื่อไฟล์</td>
+                    <td id="sub3">download ไฟล์เมื่อผู้ใช้งานคลิกบนลิงค์</td>
+                </tr>
+                <tr>
+                    <td id="sub1">href</td>
+                    <td id="sub2">ใส่ url</td>
+                    <td id="sub3">เชื่อม element ใน tag เมื่อคลิกจะเชื่อมไปยัง url</td>
+                </tr>
+                <tr>
+                    <td id="sub1">hreflang</td>
+                    <td id="sub2">รหัสของภาษา</td>
+                    <td id="sub3">ระบุภาษาให้กับเอกสารที่เชื่อมอยู่ใน tag</td>
+                </tr>
+                <tr>
+                    <td id="sub1">media</td>
+                    <td id="sub2">media_query
+                        (ตรงนี้ยังไม่เข้าใจ)</td>
+                    <td id="sub3">ระบุว่าจะใช้ media หรือ device เพื่อลิงค์กับเอกสารเพื่อใช้งาน</td>
+                </tr>
+                <tr>
+                    <td id="sub1">ping</td>
+                    <td id="sub2">รายชื่อ url </td>
+                    <td id="sub3">เมื่อผู้ใช้คลิกลิงค์ ping จะส่ง short HTTP POST เพื่อระบุ url
+                        *(ละไว้ครับยังไม่มีความรู้เรื่องหลังบ้าน)</td>
+                </tr>
+                <tr>
+                    <td id="sub1">referrerpolicy</td>
+                    <td id="sub2">no-referrer<br />
+                        no-referrer-when-downgrade<br />
+                        origin<br />
+                        origin-when-cross-origin<br />
+                        unsafe-url</td>
+                    <td id="sub3">
+                        *ขอละไว้ก่อนครับยังไม่เข้าใจเหมือนจะเป็นการเชื่อมหลายเรื่องที่ผมยังไม่เข้าใจเข้าด้วยกัน</td>
+                </tr>
+                <tr>
+                    <td id="sub1">rel</td>
+                    <td id="sub2">alternate<br />
+                        author<br />
+                        bookmark<br />
+                        external<br />
+                        help<br />
+                        license<br />
+                        next<br />
+                        nofollow<br />
+                        noreferrer<br />
+                        noopener<br />
+                        prev<br />
+                        search<br />
+                        tag</td>
+                    <td id="sub3">ใช้ระบุความเกี่ยวข้องกันระหว่างเอกสารปัจจุบันกับเอกสารที่เชื่อมไว้</td>
+                </tr>
+                <tr>
+                    <td id="sub1">target</td>
+                    <td id="sub2">_blank<br />
+                        _parent<br />
+                        _self<br />
+                        _top<br />
+                        framename</td>
+                    <td id="sub3">ใช้เปิดเอกสารบนหน้าต่างที่ๆระบุไว้ใน value</td>
+                </tr>
+                <tr>
+                    <td id="sub1">type</td>
+                    <td id="sub2">media_type</td>
+                    <td id="sub3">ใช้ระบุประเภทของข้อมูลของเอกสารที่เชื่อมต่อ</td>
+                </tr>
+
+                <tr>
+                    <td id="left">
+                        < ul>
+                    </td>
+                    <td id="right" colspan="3"> <a href="#global"> Global Attributes </a> และ <a href="#event">Event Attributes</a></td>
+                </tr>
+                <tr>
+                    <td id="left" rowspan="5">
+                        < ol>
+                    </td>
+                <tr>
+                    <td id="sub1">attribute</td>
+                    <td id="sub2">value</td>
+                    <td id="sub3">คำอธิบาย</td>
+                </tr>
+                <tr>
+                    <td id="sub1">reverse</td>
+                    <td id="sub2">reversed</td>
+                    <td id="sub3">แสดง list ข้อมูลจากข้อเลขมากไล่ลงไปหาข้อเลขน้อย (9,8,7,...เป็นต้น)</td>
+                </tr>
+                <tr>
+                    <td id="sub1">start</td>
+                    <td id="sub2">ตัวเลข</td>
+                    <td id="sub3">ใช้ระบุว่าจะให้เลขหัวข้อเริ่ม run ตั้งแต่เลขอะไรเป็นต้นไป </td>
+                </tr>
+                <tr>
+                    <td id="sub1">type</td>
+                    <td id="sub2">1<br />
+                        A<br />
+                        a<br />
+                        I<br />
+                        i</td>
+                    <td id="sub3">ใช้ระบุรูปแบบตัวกำหนดหัวข้อ
+                        (เช่น 1 = ข้อ1,2,3....
+                        A=ข้อA,B,C,...
+                        i=ข่อ i,ii,iii,iv,...)</td>
+                </tr>
+                <tr>
+                    <td id="left">
+                        < table>
+                    </td>
+                    <td colspan="3" id="right"> <a href="#global"> Global Attributes</a> และ  <a href="#event">Event Attributes</a></td>
+                </tr>
+                <tr>
+                    <td rowspan="12" id="left">
+                        < form>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="right" colspan="3"> <a href="#global"> Global Attributes </a> และ<a href="#event">Event Attributes</a></td>
+                </tr>
+                <tr>
+                    <td id="sub1">attribute</td>
+                    <td id="sub2">value</td>
+                    <td id="sub3">คำอธิบาย</td>
+                </tr>
+                <tr>
+                    <td id="sub1">accept-charset</td>
+                    <td id="sub2">รหัสชุดตัวอักษร</td>
+                    <td id="sub3">ใช้ระบุการเข้ารหัสในด้านภาษาที่จะใช้ในแบบฟอร์ม</td>
+                </tr>
+                <tr>
+                    <td id="sub1">action</td>
+                    <td id="sub2">ใส่url</td>
+                    <td id="sub3">ระบุที่อยู่เพื่อรับข้อมูลเมื่อผู้ใช้ใส่ข้อมูลในแบบฟอร์มและทำการยืนยันแล้ว</td>
+                </tr>
+                <tr>
+                    <td id="sub1">autocomplete</td>
+                    <td id="sub2">on<br />
+                        off</td>
+                    <td id="sub3">เปิดหรือปิดระบบตัวช่วยกรอกอัตโนมัติในแบบฟอร์มหรือไม่ (เมื่อพิมพ์อักษรตัวแรกลงไป
+                        browser จะเสนอคำที่พึงพิมพ์ลงไปให้เลือก)</td>
+                </tr>
+                <tr>
+                    <td id="sub1">entype</td>
+                    <td id="sub2">application/x-www-form<br />
+                        urlencoded<br />
+                        multipart/form-data<br />
+                        text/plain</td>
+                    <td id="sub3">ระบุวิธีการถอดรหัสเมื่อได้รับการส่งข้อมูลเข้า server (ใช้ได้เมื่อ
+                        method="post"เท่านั้น)
+                        (*ต้องการความรู้เรื่องหลังบ้านเพิ่มไม่เข้าใจ)</td>
+                </tr>
+                <tr>
+                    <td id="sub1">method</td>
+                    <td id="sub2">get<br />
+                        post</td>
+                    <td id="sub3">ระบุวิธีที่ HTTP ใช้ในการส่งข้อมูลเมื่อผู้ใช้ทำการส่งข้อมูล(มี2วิธี)
+                        *ยังไม่มีความรู้เรื่องหลังบ้านสักนิดรอความรู้เพิ่มเติม</td>
+                </tr>
+                <tr>
+                    <td id="sub1">name</td>
+                    <td id="sub2">ใส่ชื่อเรียก(text)</td>
+                    <td id="sub3">ชื่อของแบบฟอร์ม</td>
+                </tr>
+                <tr>
+                    <td id="sub1">novalidate</td>
+                    <td id="sub2">novalidate</td>
+                    <td id="sub3">ใช้งานเมื่อไม่ต้องการให้ form รับข้อมูลแบบ Validate (ข้อมูลยืนยันตัวตนผู้ใช้งาน)
+                        (*ไม่แน่ใจต้องการความรู้เพิ่ม)</td>
+                </tr>
+                <tr>
+                    <td id="sub1">rel</td>
+                    <td id="sub2">external<br />
+                        help<br />
+                        licence<br />
+                        next<br />
+                        license<br />
+                        next<br />
+                        nofollow<br />
+                        noopener<br />
+                        noreferrer<br />
+                        prev<br />
+                        search</td>
+                    <td id="sub3">ใช้ระบุความเกี่ยวข้องกันระหว่างลิงค์ทรัพยากรปัจจุบันกับเอกสารที่เชื่อมไว้
+                        (ยังไม่เข้าใจรอความรู้เพิ่มเติม)</td>
+                </tr>
+                <tr>
+                    <td id="sub1">target</td>
+                    <td id="sub2">_blank<br />
+                        _self<br />
+                        _parent<br />
+                        _top</td>
+                    <td id="sub3">
+                        ใช้ระบุว่าจะให้แสดงการตอบรับจากการได้รับข้อมูลจากการกรอกแบบฟอร์มจากผู้ใช้งานบนหน้าต่างแบบใด</td>
+                </tr>
+                <tr>
+                    <td id="left" rowspan="14">
+                        < button>
+                    </td>
+                    <td id="right" colspan="3"> <a href="#global"> Global Attributes </a> และ<a href="#event">Event Attributes</a></td>
+                </tr>
+                <tr>
+                    <td id="sub1">attribute</td>
+                    <td id="sub2">value</td>
+                    <td id="sub3">คำอธิบาย</td>
+                </tr>
+                <tr>
+                    <td id="sub1">autofocus</td>
+                    <td id="sub2">autofocus</td>
+                    <td id="sub3">ตัวเมาส์จะทำการ focus ไปที่พื้นที่กรอกข้อมูลในแบบฟอร์มโดยอัตโนมัติหลังจากโหลดหน้า web
+                        page</td>
+                </tr>
+                <tr>
+                    <td id="sub1">disabled</td>
+                    <td id="sub2">disabled</td>
+                    <td id="sub3">ใช้เพื่อปิดการใช้งานปุ่มใน tag เพื่อไม่ให้สามารถใช้งานหรือคลิกได้</td>
+                </tr>
+                <tr>
+                    <td id="sub1">form</td>
+                    <td id="sub2">ใส่id</td>
+                    <td id="sub3">ใช้กำหนดว่าปุ่มนี้มีไว้สำหรับแบบฟอร์มใด</td>
+                </tr>
+                <tr>
+                    <td id="sub1">formaction</td>
+                    <td id="sub2">ใส่ url</td>
+                    <td id="sub3">ใช้ระบุพื้นที่ที่จะส่งข้อมูลของแบบฟอร์มเมื่อมีการยืนยันข้อมูลจากผู้ใช้งาน
+                        (ทำงานเมื่อ type ของปุ่มเป็น submit เท่านั้น)</td>
+                </tr>
+                <tr>
+                    <td id="sub1">formactype</td>
+                    <td id="sub2">application/x-www-form<br />
+                        urlencoded<br />
+                        multipart/form-data<br />
+                        text/plain</td>
+                    <td id="sub3">ใช้ระบุวิธีเข้ารหัสของข้อมูลจากแบบฟอร์มก่อนที่จะส่งไปที่ server
+                        (ใช้ได้เมื่อ type ของปุ่มเป็น submit เท่านั้น)</td>
+                </tr>
+                <tr>
+                    <td id="sub1">formmethod</td>
+                    <td id="sub2">get<br />
+                        post</td>
+                    <td id="sub3">ใช้ระบุวิธีส่งข้อมูลจากฟอร์มที่ HTTP จะใช้
+                        (ใช้ได้เมื่อ type ของปุ่มคือ submit เท่านั้น)</td>
+                </tr>
+                <tr>
+                    <td id="sub1">formoalidate</td>
+                    <td id="sub2">formnovalidate</td>
+                    <td id="sub3">ระบุข้อมูลจากฟอร์มไม่ควรจะมีการข้อมูลในการยืนยันข้อมูลตัวตนของผู้ใข้งาน
+                        (ใช้งานได้เมื่อ type ของปุ่มคือ submit)
+                        *ไม่แน่ใจต้องการความรู้เพิ่ม</td>
+                </tr>
+                <tr>
+                    <td id="sub1">formtarget</td>
+                    <td id="sub2">_blank<br />
+                        _self<br />
+                        _parent<br />
+                        _top<br />
+                        framename</td>
+                    <td id="sub3">ใช้แสดงการตอบสนองจากการรับการยืนยันจากแบบฟอร์ม (ทำงานเฉพาะปุ่มที่มี type เป็น submit
+                        เท่านั้น)</td>
+                </tr>
+                <tr>
+                    <td id="sub1">name</td>
+                    <td id="sub2">ตั้งชื่อเรียก
+                        (text)</td>
+                    <td id="sub3">ใช้กำหนดชื่อ(กลุ่ม)ของตัวแปรปุ่มนี้</td>
+                </tr>
+                <tr>
+                    <td id="sub1">type</td>
+                    <td id="sub2">button<br />
+                        reset<br />
+                        submit</td>
+                    <td id="sub3">ระบุให้ปุ่มกดมีคหน้าที่ตาม value </td>
+                </tr>
+                <tr>
+                    <td id="sub1">value</td>
+                    <td id="sub2">ตั้งชื่อคุณลักษณะ
+                        (text)</td>
+                    <td id="sub3">เริ่มการใช้งานการตั้งค่า value ของปุ่ม</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr />
+        <h1 id="global">Global attribute</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th id="left">Global attribute</th>
+                    <th id="right">คำอธิบาย</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="left">accesskey</td>
+                    <td id="right">ใช้กำหนดปุ่ม shortcut เพื่อใช้ย้ายหน้าจอไป focus ในหัวข้อของ tag นั้นๆ</td>
+                </tr>
+                <tr>
+                    <td id="left">class</td>
+                    <td id="right">ใช้ระบุชื่อของ class เพื่อใช้งานคุณสมบัติของ class นั้นๆแก่ element ภายใน tag
+                        โดยอ้างอิงจาก style sheet
+                        (ใน 1 tag สามารถมี class ได้มากกว่า 1, <tag>element</tag>)</td>
+                </tr>
+                <tr>
+                    <td id="left">contenteditable</td>
+                    <td id="right">ใช้ระบุ value ว่าจะอนุญาตให้มีการแก้ไขเนื้อหาขณะที่เปิดอยู่บน browser ได้หรือไม่
+                        (value= true หรือ false) </td>
+                </tr>
+                <tr>
+                    <td id="left">data-*</td>
+                    <td id="right">ใช้ระบุช้อมูลของข้อมูลโดยที่ในการแสดงข้อมูลไม่ได้ต้องการแสดงข้อมูลของ data-* ออกมา
+                        (ยกตัวอย่างเช่น แสดงชื่อของคนสามคน ชื่อ A,BและC ข้อมูลที่แสดงมีเพียงเท่านี้แต่ระบบจะรู้ว่าA,B,C
+                        อายุเท่าไหร เพศอะไร สูงเท่าไหรเป็นต้น : data-*คือ อายุ เพศ ส่วนสูง )</td>
+                </tr>
+                <tr>
+                    <td id="left">dir</td>
+                    <td id="right">ใช้บอกลำดับของข้อมูล value มี ltr (left to right) และ rtl (right to left)
+                        (ยกตัวอย่าง :
+                        ใช้ตั้งค่าให้แสดงผลตามธรรมชาติของภาษาที่ต่างกันจากการอ่านซ้ายไปขวาหรือขวาไปซ้ายเป็นต้น)</td>
+                </tr>
+                <tr>
+                    <td id="left">draggable</td>
+                    <td id="right">ใช้ระบุว่า element ภายใน tag สามารถใช้เม้าส์ลากข้อมูลไปใช้ได้หรือไม่
+                        (อาจใช้คู่ dropzone)</td>
+                </tr>
+                <tr>
+                    <td id="left">dropzone</td>
+                    <td id="right">ใช้ระบุพื้นที่ในเมื่อลากข้อมูล(drag)จะทำการ คัดลอก,เคลื่อนย้าย หรือ เชื่อมต่อ
+                        เมื่อปล่อยใส่พื้นที่ dropzone</td>
+                </tr>
+                <tr>
+                    <td id="left">hidden</td>
+                    <td id="right">element ใน tag จะถูกซ้อนในหน้า web page
+                        ( ในอีกความหมายเนื้อหาของ element ใน tag อาจจะไม่มีความเกี่ยวข้องกับ Web page แล้ว) </td>
+                </tr>
+                <tr>
+                    <td id="left">id</td>
+                    <td id="right">ใช้ประกาศความเป็น เอกเทศน์ ของ tag
+                        (ยกตัวอย่าง : ประกาศ id ของ tag แล้ว สามารถเรียกใช้ id นั้นเพื่อสั่งใช้งานบางอย่าง id
+                        ที่ถูกระบุจะได้รับการทำงานเท่านั้น tag ที่ไม่มีid จะไม่ได้รับผลจากคำสั่ง
+                        กล่าวอีกอย่างคล้ายกับการตั้งชื่อให้ tag ) </td>
+                </tr>
+                <tr>
+                    <td id="left">lang</td>
+                    <td id="right">ใช้ระบุภาษาที่จะใช้ใน element ของ web page</td>
+                </tr>
+                <tr>
+                    <td id="left">spellcheck</td>
+                    <td id="right">ใช้ระบุให้ตรวขไวยากรณ์ของภาษาภายในเนื้อหา element ใน tag หรือไม่</td>
+                </tr>
+                <tr>
+                    <td id="left">style</td>
+                    <td id="right">ใช้งาน CSS แบบเขียนภายในบรรทัด(inline) แก่ element ภายใน tag</td>
+                </tr>
+                <tr>
+                    <td id="left">tabindex</td>
+                    <td id="right">ใช้กำหนดให้ tab เป็น short key ให้ focus หัวข้อของ tag นั้นๆตามลำดับที่กำหนดไว้
+                        (ทำให้ใช้งาน web page นั้นๆโดยไม่ได้ใช้เม้าส์ได้เช่นกัน)</td>
+                </tr>
+                <tr>
+                    <td id="left">title</td>
+                    <td id="right">ใช้ในการให้คำอธิบายเพิ่มเติมกับ element ใน tag
+                        (เมื่อใช้เม้าส์ชี้ element บน web page คำอธิบายเพิ่มเติมจะขึ้นมาที่ปลายเม้าส์ขณะชี้)</td>
+                </tr>
+                <tr>
+                    <td id="left">translate</td>
+                    <td id="right">ใช้ระบุว่าเนื้อหาของ element ควรแปลภาษาหรือไม่ value ของ attribute นี้คือ yes หรือ no
+                        (แปลเป็นภาษาท้องถิ่น)</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <h1 id="event">Event attribute</h1>
+        <p> (หมายเหตุ : ตารางนี้เฉพาะที่ทำงานโดยตรงต่อ element เป็นหัวข้อไป กล่าวคือไม่ใช่การ applies ลงใน < body>
+                และมีผลโดยรวมทั้ง page)</p>
+        <h1>Form event</h1>
+        <p>(หัวข้อนี้ต้องการความรู้เรื่อง java script ,วิธีการทำงาน การอ่าน code (เขียนแบบไ่ม่รู้พวกนี้ไปก่อน))</p>
+        <table>
+            <thead>
+                <tr>
+                    <th id="sub1">Event attribute</th>
+                    <th id="sub2">value</th>
+                    <th id="sub3">คำอธิบาย</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="sub1">onblur</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">ทำให้เกิด event เมื่อเป้าของการ focus ถูกนำออกไป
+                        (กล่าวคือ สมมุติ code ให้ช่อง input พื้นหลังกลายเป็นสีชมพูเมื่อ focus และ
+                        ให้พื้นหลังเป็นตัวแปรว่างที่ blur
+                        ผล : เมื่อคลิกที่ช่อง input พื้นหลังจะเป็นสีชมพูและเมื่อคลิกที่อื่นพื้นหลังจะกลายเป็นสีขาว)
+                        *อ้างอิง https://developer.mozilla.org/en-US/docs/Web/API/Element/blur_event</td>
+                </tr>
+                <tr>
+                    <td id="sub1">onchange</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">แสดงเหตุการณ์เมื่อ value ของ element ถูกเปลี่ยนแปลงค่า</td>
+                </tr>
+                <tr>
+                    <td id="sub1">onfocus</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">เมื่อคลิก, short key หรือ เหตุการณ์ใดๆ ไปยังหัวข้อที่มีตัวแปร focus จะเข้าสู่สถานะ
+                        focus และทำให้เกิด event ตาม script ใน focus</td>
+                </tr>
+                <tr>
+                    <td id="sub1">oninput</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script event จะถูกทำงานเมื่อผู้ใช้งาน input ข้อมูล</td>
+                </tr>
+                <tr>
+                    <td id="sub1">oninvalid</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script event จะถูกทำงานเมื่อ element เข้าสู่สถานะ invalid</td>
+                </tr>
+                <tr>
+                    <td id="sub1">onreset</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script event จะถูกทำงานเมื่อปุ่ม reset ของ form ถูกคลิก</td>
+                </tr>
+                <tr>
+                    <td id="sub1">onsearch</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script event จะถูกทำงานเมื่อผู้ใช้งาน้ขียนบางอย่างบนช่อง search field (<
+                            input="search">) </td>
+                </tr>
+                <tr>
+                    <td id="sub1">onselect</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">event ทำงานเมื่อหลังจาก text ถูกเลือกภายใน element </td>
+                </tr>
+                <tr>
+                    <td id="sub1">onsubmit</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">ทำงานเมื่อเกิดการ submit ข้อมูลภายใน form</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr />
+
+        <h1>Keyboard event</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th id="sub1">Keyboard events attribute</th>
+                    <th id="sub2">value</th>
+                    <th id="sub3">คำอธิบาย</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="sub1">onkeydown</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">event ทำงานเมื่อผู้ใช้งาน ขณะ กดปุ่ม (key)</td>
+                </tr>
+                <tr>
+                    <td id="sub1">onkeypress</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">event ทำงานเมื่อผู้ใช้งาน เมื่อ กดปุ่ม (key)</td>
+                </tr>
+                <tr>
+                    <td id="sub1">onkeyup</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">event ทำงานเมื่อผู้ใช้งานปล่อยการกดปุ่ม (key)</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr />
+        <h1>Mouse event</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th id="sub1">Mouse events attribute</td>
+                    <th id="sub2">value</td>
+                    <th id="sub3">คำอธิบาย</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="sub1">onclick</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">event ทำงานหลังคลิก element </td>
+                </tr>
+                <tr>
+                    <td id="sub1">ondblclick</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">event ทำงานเมื่อ ดับเบิลคลิก บน element</td>
+                </tr>
+                <tr>
+                    <td id="sub1">onmousedown</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3"> eventทำงานเมื่อกดปุ่มบนเม้าส์ ( mouse button )ลงบน element</td>
+                </tr>
+                <tr>
+                    <td id="sub1">onmousemove</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3"> event ทำงานเมื่อนำขยับ mouse pointer เคลื่อนที่ ขณะที่ mouse pointerอยู่บน element
+                    </td>
+                </tr>
+                <tr>
+                    <td id="sub1">onmouseout</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3"> event ทำงานเมื่อนำmouse pointer เคลื่อนออกจาก element</td>
+                </tr>
+                <tr>
+                    <td id="sub1">onmouseover</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3"> event ทำงานเมื่อนำmouse pointer เคลื่อนอยู่บน element</td>
+                </tr>
+                <tr>
+                    <td id="sub1">onmouseup</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3"> event ทำงานเมื่อปุ่มเม้าส์ (mouse button) ถูกปล่อยบนelement</td>
+                </tr>
+                <tr>
+                    <td id="sub1">onmousewheel</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">(เลิกใช้แล้วปัจจุบันคือ onwheel)</td>
+                </tr>
+                <tr>
+                    <td id="sub1">onwheel</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3"> event ทำงานเมื่อหมุนเม้าส์กลาง ( mouse wheel roll) ขึ้นหรือลงบนelement</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr />
+        <h1>
+            Drag event
+        </h1>
+        <table>
+            <thead>
+                <tr>
+                    <th id="sub1">Drag events attribute</th>
+                    <th id="sub2">value</th>
+                    <th id="sub3">คำอธิบาย</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="sub1">ondrag</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะ run เมื่อลาก element </td>
+                </tr>
+                <tr>
+                    <td id="sub1">ondragend</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะ run เมื่อสิ้นสุดการลาก element </td>
+                </tr>
+                <tr>
+                    <td id="sub1">ondragenter</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะ run เมื่อลาก element ไปยังจุดที่ตั้งค่า valid ไว้</td>
+                </tr>
+                <tr>
+                    <td id="sub1">ondragleave</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะ run เมื่อปล่อย element ลงไปยังจุดที่ตั้งค่า valid ไว้</td>
+                </tr>
+                <tr>
+                    <td id="sub1">ondragover</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะ run ในขณะที่ลาก element บนจุดที่ตั้งค่า valid ไว้</td>
+                </tr>
+                <tr>
+                    <td id="sub1">ondragstart</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะ run เมื่อเริ่มการลาก (drag operation)</td>
+                </tr>
+                <tr>
+                    <td id="sub1">ondrop</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะ run เมื่อทำการปล่อย element ที่ลากอยู่</td>
+                </tr>
+                <tr>
+                    <td id="sub1">onscroll</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะ run ขณะที่ element ของ scrollbar กำลังถูกเลื่อน (แทบเลื่อนหน้าจอทางขวามือ)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <hr />
+        <h1>Clipboard event</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th id="sub1">Clipbpard events attribute</th>
+                    <th id="sub2">value</th>
+                    <th id="sub3">คำอธิบาย</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="sub1">oncopy</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะทำงานเมื่อผู้ใช้งานทำการ คัดลอก(copy) เนื้อหาภายใน element</td>
+                </tr>
+                <tr>
+                    <td id="sub1">oncut</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะทำงานเมื่อผู้ใช้งานทำการ คัดลอกแบบตัด(cut) เนื้อหาภายใน element</td>
+                </tr>
+                <tr>
+                    <td id="sub1">onpaste</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะทำงานเมื่อผู้ใช้งานทำการ วาง(paste) เนื้อหาภายใน element</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr />
+        <h1>Media event</h1>
+        <p>ทำงานร่วมกับ media ต่างๆและ img (ข้อสงสัย img ใช้ในหัวข้อนีแบบไหน)</p>
+        <table>
+            <thead>
+                <tr>
+                    <th id="sub1">Media events attribute</th>
+                    <th id="sub2">value</th>
+                    <th id="sub3">คำอธิบาย</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="sub1">onabort</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะถูก run เมื่อ abort ทำงานไม่ถูกต้อง onabort จะถูก run แทน</td>
+                </tr>
+                <tr>
+                    <td id="sub1">oncanplay</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะถูก run เมื่อไฟล์พร้อมที่จะเล่น (เมื่อไฟล์ถูกโหลดจนสามารถเล่นได้)</td>
+                </tr>
+                <tr>
+                    <td id="sub1">oncanplaythrough</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะถูก run เมื่อไฟล์พร้อมที่จะเล่นโดยไม่มีการหยุด pause หรือ โหลดไฟล์
+                        (buffering)</td>
+                </tr>
+                <tr>
+                    <td id="sub1">oncuechange</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะถูก run เมื่อ cue ถูกเปลี่ยนใน element ของ
+                        <track>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="sub1">ondurationchange</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะถูก run เมื่อความยาวของ media ถูกเปลี่ยน</td>
+                </tr>
+                <tr>
+                    <td id="sub1">onemptied</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะถูก run เมื่อบางอย่างผิดปกติเกิดขึ้น เช่น การขาดการเชื่อมต่ออย่างคาดไม่ถึง
+                    </td>
+                </tr>
+                <tr>
+                    <td id="sub1">onended</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะถูก run เมื่อ media เล่นไปจนถึงจุดจบของ media</td>
+                </tr>
+                <tr>
+                    <td id="sub1">onerror</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะถูก run เมื่อการโหลดไฟล์เกิดการ error</td>
+                </tr>
+                <tr>
+                    <td id="sub1">onloadeddata</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะถูก run เมื่อ media ถูกโหลด</td>
+                </tr>
+                <tr>
+                    <td id="sub1">onloadedmetadata</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะถูก run เมื่อ meta data (เช่นความยาวของ media เป็นต้น) ของ media ถูกโหลด</td>
+                </tr>
+                <tr>
+                    <td id="sub1">onloadstart</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะถูก run เมื่อไฟล์กำลังเริ่มกระบวนการโหลด</td>
+                </tr>
+                <tr>
+                    <td id="sub1">onpause</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะถูก run เมื่อ media ถูกหยุด (pause) ทั้งที่เกิดจากผู้ใช้งานหรือโปรแกรม</td>
+                </tr>
+                <tr>
+                    <td id="sub1">onplay</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะถูก run เมื่อ media พร้อมเล่น</td>
+                </tr>
+                <tr>
+                    <td id="sub1">onplaying</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะถูก run ขณะที่ media กำลังเล่น</td>
+                </tr>
+                <tr>
+                    <td id="sub1">onprogress</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะถูก run เมื่อ browser อยู่ในช่วงกระบวนการได้รับข้อมูลของ media</td>
+                </tr>
+                <tr>
+                    <td id="sub1">onratechange</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะถูก run ทุกครั้งที่ค่าของ playback ถูกเปลี่ยน (เช่น ผู้ใช้งานทำการ slow
+                        motion หรือ fast forward)</td>
+                </tr>
+                <tr>
+                    <td id="sub1">onseeked</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะถูก run เมื่อพบว่า attribute ถูกตั้งค่าผิดพลาด</td>
+                </tr>
+                <tr>
+                    <td id="sub1">onseeking</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะถูก run ขณะที่พบว่า attribute นั้นทำงานถูกต้อง </td>
+                </tr>
+                <tr>
+                    <td id="sub1">onstalled</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะถูก run เมื่อ browser ไม่สามารถดึงข้อมูลจาก media
+                        ได้(ไม่ว่าจะเกิดจากอะไรก็ตาม)</td>
+                </tr>
+                <tr>
+                    <td id="sub1">onsuspend</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะถูก run ขณะที่การดึกข้อมูลของ media หยุดเนื่องจากการ download นั้นเสร็จสิน
+                        (ไม่ว่าจะด้วยอะไรก็ตาม)</td>
+                </tr>
+                <tr>
+                    <td id="sub1">ontimeupdate</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะถูก run เมื่อจุดเริ่มการเล่นของ media ถูกเปลี่ยน (เช่น เกิดจากการที่ผู้ใช้งาน
+                        fast toward ในจุดต่างๆของ media )</td>
+                </tr>
+                <tr>
+                    <td id="sub1">onvolumechange</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะถูก run ทุกครั้งเมื่อมีการเปลี่ยนระดับเสียง (volume) รวมไปถึงการตั้งค่าเป็น
+                        mute </td>
+                </tr>
+                <tr>
+                    <td id="sub1">onwaiting</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">script จะถูก run เมื่อ media ถูก pause แต่เพื่อการทำงานต่อของ media ในบางส่วน (เช่น
+                        การ pause media เพื่อการดึงข้อมูล (buffer) ของ media )</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr />
+        <h1>Misc event</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th id="sub1">Misc Events attribute</th>
+                    <th id="sub2">value</th>
+                    <th id="sub3">คำอธิบาย</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="sub1">ontoggle</td>
+                    <td id="sub2">script</td>
+                    <td id="sub3">เมื่อผู้ใช้งานเปิดและปิด element ของ < details ></details></td>
+                </tr>
+            </tbody>
+        </table>
+        <hr/>
+    </div>
+</body>
+
+
+
+</html>
