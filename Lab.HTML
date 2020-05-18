@@ -28,18 +28,56 @@
             padding: 3px;
 
         }
+
+        .searchbar {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            color: #FFFFFF;
+            background-color: orangered;
+            width: 100%
+        }
+
+        .searchbar-ul {
+            margin: 0px;
+            padding: 0px 20px 0px 20px;
+        }
+
+        .spacebar {
+            padding-right: 20px;
+            color: #FFFFFF;
+        }
+
+        /* 1.display:inline ไม่ทำงาน=3="(ใช้spanแทนไปก่อนรอความรู้) (ps.แล้วไหงคอมเม้นท์กลายเป็นสัญลักษณ์แบบนี้นี่)
+           2.รอแก้ animation เปลี่ยนสีไปกลับตาม hover *ใช้background แก้ปัญหาเรื่องสีไปก่อน (เสียเวลาจนไม่ได้ทำอย่างอื่นสักที)
+     .nav-ul{
+        color:white;
+    }
+    .nav-ul:hover{
+        animation-name:whitecolor ;
+        animation-ms:500ms;
+        animation-fill-mode:forwards;
+    }
+    @keyframes whitecolor{
+        100%{
+            color:white;
+        }
         
-            
-       
+} */
     </style>
 
 </head>
 
 <body>
+
     <div>
-
-
-        <h1>
+        <nav class="searchbar searchbar-ul">
+            <span class="spacebar"><a href="#attribute">1.Attribute</a></span>
+            <span class="spacebar"><a href="#diff"> 2.Differentiation</a></span>
+            <span class="spacebar">Event attribute</span>
+        </nav>
+        <br />
+        <h1 id="attribute">
             1.Attribute
         </h1>
         <!--ต้องอัพเดตความรู้เพิ่มบางหัวข้อไม่เข้าใจ-->
@@ -55,18 +93,21 @@
                     <td id="left">
                         < h>
                     </td>
-                    <td id="right" colspan="3"> <a href="#global">Global Attributes</a> และ <a href="#event">Event Attributes</a> </td>
+                    <td id="right" colspan="3"> <a href="#global">Global Attributes</a> และ <a href="#event">Event
+                            Attributes</a> </td>
                 </tr>
                 <td id="left">
                     < p>
                 </td>
-                <td id="right" colspan="3"> <a href="#global"> Global Attributes</a> และ <a href="#event">Event Attributes</a></td>
+                <td id="right" colspan="3"> <a href="#global"> Global Attributes</a> และ <a href="#event">Event
+                        Attributes</a></td>
                 </tr>
                 <tr>
                     <td id="left">
                         < div>
                     </td>
-                    <td id="right" colspan="3"> <a href="#global"> Global Attributes</a> และ <a href="#event">Event Attributes</a></td>
+                    <td id="right" colspan="3"> <a href="#global"> Global Attributes</a> และ <a href="#event">Event
+                            Attributes</a></td>
                 </tr>
                 <tr>
                     <td id="left" rowspan="14">
@@ -75,7 +116,8 @@
                 </tr>
 
                 <tr>
-                    <td id="right" colspan="3"> <a href="#global"> Global Attributes</a> และ <a href="#event">Event Attributes</a></td>
+                    <td id="right" colspan="3"> <a href="#global"> Global Attributes</a> และ <a href="#event">Event
+                            Attributes</a></td>
                 </tr>
                 <tr>
                     <td id="sub1">Attribute</td>
@@ -122,7 +164,7 @@
                         unsafe-url</td>
                     <td id="sub3">
                         *ขอละไว้ก่อนครับยังไม่เข้าใจเหมือนจะเป็นการเชื่อมหลายเรื่องที่ผมยังไม่เข้าใจเข้าด้วยกัน</td>
-                        <!--รออัพเดตความรู้-->
+                    <!--รออัพเดตความรู้-->
                 </tr>
                 <tr>
                     <td id="sub1">size</td>
@@ -158,7 +200,8 @@
                     </td>
                 </tr>
                 <tr>
-                    <td id="right" colspan="3"> <a href="#global"> Global Attributes </a> และ <a href="#event">Event Attributes</a></td>
+                    <td id="right" colspan="3"> <a href="#global"> Global Attributes </a> และ <a href="#event">Event
+                            Attributes</a></td>
                 </tr>
                 <tr>
                     <td id="sub1">attribute</td>
@@ -238,7 +281,8 @@
                     <td id="left">
                         < ul>
                     </td>
-                    <td id="right" colspan="3"> <a href="#global"> Global Attributes </a> และ <a href="#event">Event Attributes</a></td>
+                    <td id="right" colspan="3"> <a href="#global"> Global Attributes </a> และ <a href="#event">Event
+                            Attributes</a></td>
                 </tr>
                 <tr>
                     <td id="left" rowspan="5">
@@ -275,7 +319,8 @@
                     <td id="left">
                         < table>
                     </td>
-                    <td colspan="3" id="right"> <a href="#global"> Global Attributes</a> และ  <a href="#event">Event Attributes</a></td>
+                    <td colspan="3" id="right"> <a href="#global"> Global Attributes</a> และ <a href="#event">Event
+                            Attributes</a></td>
                 </tr>
                 <tr>
                     <td rowspan="12" id="left">
@@ -283,7 +328,8 @@
                     </td>
                 </tr>
                 <tr>
-                    <td id="right" colspan="3"> <a href="#global"> Global Attributes </a> และ<a href="#event">Event Attributes</a></td>
+                    <td id="right" colspan="3"> <a href="#global"> Global Attributes </a> และ<a href="#event">Event
+                            Attributes</a></td>
                 </tr>
                 <tr>
                     <td id="sub1">attribute</td>
@@ -364,7 +410,8 @@
                     <td id="left" rowspan="14">
                         < button>
                     </td>
-                    <td id="right" colspan="3"> <a href="#global"> Global Attributes </a> และ<a href="#event">Event Attributes</a></td>
+                    <td id="right" colspan="3"> <a href="#global"> Global Attributes </a> และ<a href="#event">Event
+                            Attributes</a></td>
                 </tr>
                 <tr>
                     <td id="sub1">attribute</td>
@@ -928,11 +975,73 @@
                 <tr>
                     <td id="sub1">ontoggle</td>
                     <td id="sub2">script</td>
-                    <td id="sub3">เมื่อผู้ใช้งานเปิดและปิด element ของ < details ></details></td>
+                    <td id="sub3">เมื่อผู้ใช้งานเปิดและปิด element ของ < details>
+                            </details>
+                    </td>
                 </tr>
             </tbody>
         </table>
+        <hr />
+        <h1 id="diff">2.Differentiation</h1>
+        <table>
+            <tr>
+                <th id="sub1">tag</th>
+                <th id="sub2">ความเหมือน</th>
+                <th id="sub3">ความแตกต่าง</th>
+            </tr>
+            <tbody>
+                <tr>
+                    <td id="sub1">
+                        < hr>&< br>
+                    </td>
+                    <td id="sub2">คือ tag หน้าที่หลักคือการเว้นบรรทัด</td>
+                    <td id="sub3">br คือ การเว้นบรรทัด<br />
+                        hr คือ การขีดเส้นบรรทัดเพื่อเว้นบรรทัด</td>
+                </tr>
+                <tr>
+                    <td id="sub1">< ul >&< ol ></td>
+                    <td id="sub2">คือ tag การทำหัวข้อเป็นหัวข้อย้อยๆ
+                        ใช้ tag < li >< /li > ทั้งคู่ในการใช้งาน</td>
+                    <td id="sub3">ul  คือ การทำหัวข้อย่อยโดยใช้ bullet เป็นหัวข้อ
+                        ol คือ การทำหัวข้อย่อยโดยใช้ลำดับในแบบต่างๆเป็นหัวข้อ (เช่น 1,2,3,... A,B,C,...)</td>
+                </tr>
+                <tr>
+                    <td id="sub1">< select >&< checkbox >&< radio button ></td>
+                    <td id="sub2">คือการเลือกตัวเลือกคำตอบภายในแบบ form
+                        tag ทั้งหมดทำงานภายใน form </td>
+                    <td id="sub3">Pattern ในการเลือกคำตอบของแต่ละ tag จะต่างกันไป<br/>
+                        < select > คือ แทปเลือกคำตอบ<br/>
+                        < checkbox > คือ Pattern สำหรับการเลือกคำตอบแบบเป็นกล่องเพื่อติ๊กเลือกคำตอบ<br/>
+                        < radio button > คือ Pattern สำหรับการเลือกคำตอบแบบปุ่ม bullet </td>
+                </tr>
+                <tr>
+                    <td id="sub1">< div >&< span ></td>
+                    <td id="sub2">ใช้ในการนำเสนอข้อความ(content) บน web page
+                        สามารถใช้ global & event attribute ได้ทั้งคู่</td>
+                    <td id="sub3">Pattern การเรียงบน web page แตกต่างกัน<br/>
+                        < div > โดยทั่วๆไปจะเรียงในแนวดิ่ง (บนลงล่าง) : block-line<br/>
+                        < span > โดยทั่วๆไปจะเรียงในแนวนอน (ซ้ายไปขวา) : inline</td>
+                </tr>
+                <tr>
+                    <td id="sub1">< script >&< style ></td>
+                    <td id="sub2">ทั้งคู๋มีหน้าที่หลักในการกำหนดหรือปรับแต่งรูปลักษณ์หรือคุณสมบัติให้ทำงานตาม function ที่ถูกออกแบบไว้โดยจะดูว่า function ต่อไปจะต้องทำอะไร</td>
+                    <td id="sub3">style (CSS) ทำงานโดยแสดง function มาจาก CSS<br/> 
+                        script (Java script) ทำงานโดยดึงข้อมูลหรือส่งข้อมูลเพื่อให้เกิด function โดยการดึงข้อมูลมาจาก Jquery หรือ Java script
+                         (ยังขาดความรู้ตรง Jquery และ Java script)</td>
+                    </tr>
+            </tbody>
+        </table>
         <hr/>
+        <h1>3.input type</h1>
+        <table>
+            <tr>
+                <th id="sub1"></th>
+                <th id="sub2"></th>
+                </tr>  
+        </table>
+        
+
+
     </div>
 </body>
 
