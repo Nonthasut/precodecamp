@@ -72,10 +72,10 @@
 
     <div>
         <nav class="searchbar searchbar-ul">
-            <span class="spacebar"><a href="#attribute">1.Attribute</a></span>
+            <span class="spacebar"><a href="#attribute">1.Attribute</a></span> 
             <span class="spacebar"><a href="#diff"> 2.Differentiation</a></span>
-            <span class="spacebar">Event attribute</span>
-        </nav>
+            <span class="spacebar"><a href="#type">3.input type</a></span>
+        </nav> 
         <br />
         <h1 id="attribute">
             1.Attribute
@@ -960,6 +960,7 @@
                         การ pause media เพื่อการดึงข้อมูล (buffer) ของ media )</td>
                 </tr>
             </tbody>
+            
         </table>
         <hr />
         <h1>Misc event</h1>
@@ -1023,7 +1024,7 @@
                         < span > โดยทั่วๆไปจะเรียงในแนวนอน (ซ้ายไปขวา) : inline</td>
                 </tr>
                 <tr>
-                    <td id="sub1">< script >&< style ></td>
+                    <td id="sub1"> < script >& < style ></td>
                     <td id="sub2">ทั้งคู๋มีหน้าที่หลักในการกำหนดหรือปรับแต่งรูปลักษณ์หรือคุณสมบัติให้ทำงานตาม function ที่ถูกออกแบบไว้โดยจะดูว่า function ต่อไปจะต้องทำอะไร</td>
                     <td id="sub3">style (CSS) ทำงานโดยแสดง function มาจาก CSS<br/> 
                         script (Java script) ทำงานโดยดึงข้อมูลหรือส่งข้อมูลเพื่อให้เกิด function โดยการดึงข้อมูลมาจาก Jquery หรือ Java script
@@ -1032,12 +1033,81 @@
             </tbody>
         </table>
         <hr/>
-        <h1>3.input type</h1>
+        <h1 id="type">3.input type</h1>
         <table>
             <tr>
-                <th id="sub1"></th>
-                <th id="sub2"></th>
+                <th id="sub1">type</th>
+                <th id="sub2">คำอธิบาย (วิธีใช้งาน)</th>
                 </tr>  
+            <tr>
+                <td id="sub1">button</td> 
+                <td id="sub2">ใช้ระบุเพื่อสร้างปุ่มที่สามารถคลิกได้</td>  
+            </tr>
+            <tr>
+                <td id="sub1">checkbox</td> 
+                <td id="sub2">ใช้สร้างกล่องเพื่อให้ผู้ใช้งานเลือก</td>  
+            </tr>     
+            <tr>
+                <td id="sub1">color</td> 
+                <td id="sub2">ใช้ในการระบุสี</td>  
+            </tr>    <tr>
+                <td id="sub1">date</td> 
+                <td id="sub2">ใช้ในการระบุข้อมูลเรื่องวันที่ : ปี,เดือน,วัน (ไม่มีเวลา)</td>  
+            </tr>    <tr>
+                <td id="sub1">datetime-local</td> 
+                <td id="sub2">ใช้ในการระบุข้อมูลเรื่องวันที่ ปี,เดือน,วัน และเวลาโดย เวลาจะขึ้นอยู่กับ time zone </td>  
+            </tr>    <tr>
+                <td id="sub1">e-mail</td> 
+                <td id="sub2">ใช้ระบุพื้นที่ที่ใช้ใส่ e-mail address</td>  
+            </tr>    <tr>
+                <td id="sub1">file</td> 
+                <td id="sub2">ระบุพื้นที่เปุ่มพื่อให้เลือกไฟล์ (Browse) :ใช้ในการ upload ไฟล์</td>  
+            </tr>    <tr>
+                <td id="sub1">hidden</td> 
+                <td id="sub2">ใช้ซ้อนเพื่อนที่กรอกข้อมูล</td>  
+            </tr>    <tr>
+                <td id="sub1">image</td> 
+                <td id="sub2">ใช้ระบุให้รูปภาพมีคุณสมบัติเหมือนปุ่ม submit</td>  
+            </tr>    <tr>
+                <td id="sub1">month</td> 
+                <td id="sub2">ระบุเดือนและปี</td>  
+            </tr>    <tr>
+                <td id="sub1">number</td> 
+                <td id="sub2">ใช้ระบุพื้นที่เพื่อใช้ในการใส่ตัวเลข</td>  
+            </tr>    <tr>
+                <td id="sub1">password</td> 
+                <td id="sub2">ใช้กำหนดพื้นที่สำหรับใส่ password</td>  
+            </tr>    <tr>
+                <td id="sub1">radio</td> 
+                <td id="sub2">ใช้กำหนดพื้นที่สำหรับให้ผู้ใช้งานเลือกตัวเลือก โดย Pattern ตัวเลือกจะเป็นตัวเลือกแบบ bullet</td>  
+            </tr>    <tr>
+                <td id="sub1">range</td> 
+                <td id="sub2">ใช้กำหนดขอบเขตของค่าของข้อมูลที่ใช้</td>  
+            </tr>    <tr>
+                <td id="sub1">reset</td> 
+                <td id="sub2">ใช้ระบุปุ่มใช้ในการ reset</td>  
+            </tr>    <tr>
+                <td id="sub1">search</td> 
+                <td id="sub2">ใช้ระบุพื้นที่ใส่ข้อความเพื่อใช้ใน string ของ search </td>  
+            </tr>    <tr>
+                <td id="sub1">submit</td> 
+                <td id="sub2">ใช้กำหนดปุ่ม submit</td>  
+            </tr>    <tr>
+                <td id="sub1">tel</td> 
+                <td id="sub2">ใช้กำหนดพื้นที่สำหรับใส่เบอร์โทรศัพท์</td>  
+            </tr>    <tr>
+                <td id="sub1">text</td> 
+                <td id="sub2">ใช้กำหนดพื้นที่สำหรับใส่ ข้อความ (text) : ค่า default ถูกตั้งไว้ 1 บรรทัด</td>  
+            </tr>    <tr>
+                <td id="sub1">time</td> 
+                <td id="sub2">ใช้ใส่เพื่อระบุเวลา (ไม่เกี่ยวข้องกับ timezone)</td>  
+            </tr>    <tr>
+                <td id="sub1">url</td> 
+                <td id="sub2">ระบุพื้นที่เพื่อใช้ใส่ URL</td>  
+            </tr>    <tr>
+                <td id="sub1">week</td> 
+                <td id="sub2">ใช้ระบุสัปดาห์และปี (ไม่เกี่ยวข้องกับ timezone)</td>  
+            </tr>     
         </table>
         
 
