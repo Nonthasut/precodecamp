@@ -1,0 +1,1091 @@
+<!-- เน้นการจัดโครงไม่ได้ลงใน detail ,ละการตกแต่งปลีกย่อย , ใช้สีกับขอบเพื่อง่ายต่อการดูขอบเขต ,ยังไม่แน่ใจเรื่องการใช้ flex -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+            .grid-header {
+            display: grid;
+            background-color:red;
+            padding: 1em;
+            grid-template-rows: 64px ;
+            grid-column-gap: 1em;
+            width: 100%;
+            
+        }
+
+        
+        .grid-nav {
+            display: grid;
+            background-color:red;
+            padding: 1em;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: 1fr ;
+            grid-column-gap: 1em;
+            width: 100%;
+            margin-top: 1px;
+        }
+
+
+        .grid-container {
+            display: grid;
+            background-color:green;
+            padding: 1em;
+            grid-template-areas: 
+               
+                "top-topic top-topic top-topic top-topic"
+                "content content content content"
+                "content content content connent";
+            grid-template-columns: repeat(4, 240px);
+            grid-template-rows: repeat(3, 231px);
+            grid-column-gap: 1em;
+            justify-content: center;
+            
+        }
+
+        .banner{
+            border: 1px solid black;
+        }
+
+        .nav{
+            border: 1px solid black;
+        }
+
+        .grid-items {
+            border: 1px solid white;
+            display: grid;
+            grid-template-areas: "pic"
+                "topic"
+                "time";
+            grid-template-rows: 144px 2fr 1fr;
+            color: black;
+
+        }
+
+        .top-topic {
+            grid-area: 1/1/2/5;
+        }
+
+        .grid-items-top {
+            border: 1px solid white;
+            display: grid;
+            grid-template-areas: "top-pic top-content"
+                "top-pic top-content2"
+                "top-pic top-content3";
+            grid-template-rows: 1fr 1fr 1fr;
+            color: black;
+
+        }
+
+        .top-pic {
+            border: 1px solid black;
+            grid-area: 1/1/4/2;
+        }
+
+        .top-content {
+            border: 1px solid black;
+            grid-area: 1/2/2/3;
+            ;
+        }
+
+        .top-content2 {
+            border: 1px solid black;
+            grid-area: 2/2/3/3;
+        }
+
+
+        .top-content3 {
+            border: 1px solid black;
+            grid-area: 3/2/4/3;
+        }
+
+        .pic div img {
+            border: 1px solid orangered;
+        }
+
+
+        .topic {
+            border: 1px solid orangered;
+        }
+
+        .time {
+            border: 1px solid orangered;
+        }
+
+
+        /* second-section's container*/
+        .grid-container-second {
+            display: grid;
+            background-color: green;
+            padding: 1em;
+            grid-template-areas: "content content content connent";
+            grid-template-columns: repeat(4, 240px);
+            grid-template-rows: 231px;
+            grid-column-gap: 1em;
+            justify-content: center;
+        }
+
+        /* fourth-section's ,sixth-section's container*/
+        .grid-container-fourth,
+        .grid-container-sixth {
+            display: grid;
+            background-color: green;
+            padding: 1em;
+            grid-template-areas:
+                "top-topic top-topic top-topic top-topic"
+                "content content content content";
+            grid-template-columns: repeat(4, 240px);
+            grid-template-rows: repeat(2, 231px);
+            grid-column-gap: 1em;
+            justify-content: center;
+        }
+
+        .grid-container-fifth,
+        .grid-container-sixth {
+            display: grid;
+            background-color: green;
+            padding: 1em;
+            grid-template-areas:
+                "top-topic top-topic top-topic top-topic";
+            grid-template-columns: repeat(4, 240px);
+            grid-template-rows: 231px;
+            grid-column-gap: 1em;
+            justify-content: center;
+        }
+
+        /* seventh-section's container */
+        .grid-container7 {
+            display: grid;
+            background-color: green;
+            padding: 1em;
+            grid-template-areas:
+                "top-topic7 top-topic7 top-topic7 top-topic7"
+                "content content content content"
+                "content content content connent";
+            grid-template-columns: repeat(4, 240px);
+            grid-template-rows: repeat(3, 231px);
+            grid-column-gap: 1em;
+            justify-content: center;
+        }
+
+        .top-pic7 {
+            border: 1px solid black;
+
+        }
+
+        .top-topic7 {
+            border: 1px solid black;
+
+            grid-area: 1/2/2/4;
+
+        }
+
+        .top-content7 {
+            border: 1px solid black;
+
+
+        }
+
+        .content7 {
+            border: 1px solid white;
+            display: grid;
+            grid-template-areas: "top-pic top-content"
+                "top-pic top-content2"
+                "top-pic top-content3";
+            grid-template-rows: 1fr 1fr 1fr;
+            color: black;
+        }
+
+ /* eighth-section's container */
+        .grid-container-8 {
+            display: grid;
+            background-color: green;
+            padding: 1em;
+            grid-template-areas: 
+                "content content content content"
+                "content content content connent";
+            grid-template-columns: repeat(4, 240px);
+            grid-template-rows: repeat(2, 231px);
+            grid-column-gap: 1em;
+            justify-content: center;
+        }
+/* nineth-section's container */
+.grid-container-9 {
+            display: grid;
+            background-color: green;
+            padding: 1em;
+            grid-template-areas: "choice choice"
+                                 "choice choice"
+                                 "choice choice";
+            grid-template-columns: 50% 50%;
+            grid-template-rows: repeat(3, 30%);
+            grid-column-gap: 1em;
+            justify-content: center;}
+
+            .choice{
+                border: 1px solid black;
+                
+            }
+
+/* last-section's container */
+
+.last-container {
+            display: grid;
+            background-color: green;
+            padding: 1em;
+            grid-template-areas: "contract contract"
+                                 "contract contract";
+            grid-template-columns: 50% 50%;
+            grid-template-rows: repeat(2, 30%);
+            grid-column-gap: 1em;
+            justify-content: center;}
+
+            .contract{
+                
+                padding: 1em;
+            }
+
+
+
+        }
+        .grid-container {
+            display: grid;
+            background-color: green;
+            padding: 1em;
+            grid-template-areas: "banner banner banner banner"
+                "nav nav nav nav"
+                "top-topic top-topic top-topic top-topic"
+                "content content content content"
+                "content content content connent";
+            grid-template-columns: repeat(4, 240px);
+            grid-template-rows: repeat(3, 231px);
+            grid-column-gap: 1em;
+            justify-content: center;
+        }
+
+        .grid-items {
+            border: 1px solid white;
+            display: grid;
+            grid-template-areas: "pic"
+                "topic"
+                "time";
+            grid-template-rows: 144px 2fr 1fr;
+            color: black;
+
+        }
+
+        .top-topic {
+            grid-area: 1/1/2/5;
+        }
+
+        .grid-items-top {
+            border: 1px solid white;
+            display: grid;
+            grid-template-areas: "top-pic top-content"
+                "top-pic top-content2"
+                "top-pic top-content3";
+            grid-template-rows: 1fr 1fr 1fr;
+            color: black;
+
+        }
+
+        .top-pic {
+            border: 1px solid black;
+            grid-area: 1/1/4/2;
+        }
+
+        .top-content {
+            border: 1px solid black;
+            grid-area: 1/2/2/3;
+            ;
+        }
+
+        .top-content2 {
+            border: 1px solid black;
+            grid-area: 2/2/3/3;
+        }
+
+
+        .top-content3 {
+            border: 1px solid black;
+            grid-area: 3/2/4/3;
+        }
+
+        .pic div img {
+            border: 1px solid orangered;
+        }
+
+
+        .topic {
+            border: 1px solid orangered;
+        }
+
+        .time {
+            border: 1px solid orangered;
+        }
+
+
+        /* second-section's container*/
+        .grid-container-second {
+            display: grid;
+            background-color: green;
+            padding: 1em;
+            grid-template-areas: "content content content connent";
+            grid-template-columns: repeat(4, 240px);
+            grid-template-rows: 231px;
+            grid-column-gap: 1em;
+            justify-content: center;
+        }
+
+        /* fourth-section's ,sixth-section's container*/
+        .grid-container-fourth,
+        .grid-container-sixth {
+            display: grid;
+            background-color: green;
+            padding: 1em;
+            grid-template-areas:
+                "top-topic top-topic top-topic top-topic"
+                "content content content content";
+            grid-template-columns: repeat(4, 240px);
+            grid-template-rows: repeat(2, 231px);
+            grid-column-gap: 1em;
+            justify-content: center;
+        }
+
+        .grid-container-fifth,
+        .grid-container-sixth {
+            display: grid;
+            background-color: green;
+            padding: 1em;
+            grid-template-areas:
+                "top-topic top-topic top-topic top-topic";
+            grid-template-columns: repeat(4, 240px);
+            grid-template-rows: 231px;
+            grid-column-gap: 1em;
+            justify-content: center;
+        }
+
+        /* seventh-section's container */
+        .grid-container7 {
+            display: grid;
+            background-color: green;
+            padding: 1em;
+            grid-template-areas:
+                "top-topic7 top-topic7 top-topic7 top-topic7"
+                "content content content content"
+                "content content content connent";
+            grid-template-columns: repeat(4, 240px);
+            grid-template-rows: repeat(3, 231px);
+            grid-column-gap: 1em;
+            justify-content: center;
+        }
+
+        .top-pic7 {
+            border: 1px solid black;
+
+        }
+
+        .top-topic7 {
+            border: 1px solid black;
+
+            grid-area: 1/2/2/4;
+
+        }
+
+        .top-content7 {
+            border: 1px solid black;
+
+
+        }
+
+        .content7 {
+            border: 1px solid white;
+            display: grid;
+            grid-template-areas: "top-pic top-content"
+                "top-pic top-content2"
+                "top-pic top-content3";
+            grid-template-rows: 1fr 1fr 1fr;
+            color: black;
+        }
+
+ /* eighth-section's container */
+        .grid-container-8 {
+            display: grid;
+            background-color: green;
+            padding: 1em;
+            grid-template-areas: 
+                "content content content content"
+                "content content content connent";
+            grid-template-columns: repeat(4, 240px);
+            grid-template-rows: repeat(2, 231px);
+            grid-column-gap: 1em;
+            justify-content: center;
+        }
+/* nineth-section's container */
+.grid-container-9 {
+            display: grid;
+            background-color: green;
+            padding: 1em;
+            grid-template-areas: "choice choice"
+                                 "choice choice"
+                                 "choice choice";
+            grid-template-columns: 50% 50%;
+            grid-template-rows: repeat(3, 30%);
+            grid-column-gap: 1em;
+            justify-content: center;}
+
+            .choice{
+                border: 1px solid black;
+                
+            }
+
+/* last-section's container */
+
+.last-container {
+            display: grid;
+            background-color: green;
+            padding: 1em;
+            grid-template-areas: "contract contract"
+                                 "contract contract";
+            grid-template-columns: 50% 50%;
+            grid-template-rows: repeat(2, 30%);
+            grid-column-gap: 1em;
+            justify-content: center;}
+
+            .contract{
+                
+                padding: 1em;
+            }
+
+            .grid-survey{
+                display: grid;
+            background-color: black;
+            padding: 1em;
+            grid-template-areas: "survey survey survey"
+                                 "info info info"
+                                 "info info info"
+                                 "credit credit credit";
+            grid-template-columns: 33% 33% 33%;
+            grid-template-rows: repeat(4, 25%);
+            grid-column-gap: 1em;
+            justify-content: center;}
+            }
+      
+    
+
+            
+
+}
+    </style>
+</head>
+<body>
+    <header>
+    <div class="grid-header">
+
+    <div class="banner">  <a href="#"> <img src="https://picsum.photos/210/64  " alt="top-photo" width="210"
+        height="64"> </a>  </div>
+    
+    </div>
+
+    <divc class="grid-nav">
+    <a href="#"><div>nav</div></a>
+    <a href="#"><div>nav</div></a>
+    <a href="#"><div>nav</div></a>
+    <a href="#"><div>nav</div></a>
+    <a href="#"><div>nav</div></a>
+    <a href="#"><div>nav</div></a>
+    <a href="#"><div>nav</div></a>
+    <a href="#"><div>nav</div></a>
+    </div>
+
+</header>
+
+    <!-- /width/height
+https://picsum.photos/200/300 -->
+
+<section role="top-stoty">
+    <div class="grid-container">
+
+
+        <div class="grid-items-top top-topic">
+
+            <div class="top-pic"> <img src="https://picsum.photos/500/500  " alt="top-photo" width="100%"
+                    height="100%"> </div>
+            <div class="top-content">Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+            <div class="top-content2">Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+            <div class="top-content3">Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+
+
+
+        </div>
+
+
+
+
+        <a href="#">
+            <div class="grid-items content">
+                <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%" height="144px">
+                </div>
+                <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="grid-items content">
+                <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%" height="144px">
+                </div>
+                <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="grid-items content">
+                <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%" height="144px">
+                </div>
+                <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="grid-items content">
+                <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%" height="144px">
+                </div>
+                <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="grid-items content">
+                <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%" height="144px">
+                </div>
+                <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="grid-items content">
+                <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%" height="144px">
+                </div>
+                <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="grid-items content">
+                <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%" height="144px">
+                </div>
+                <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="grid-items content">
+                <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%" height="144px">
+                </div>
+                <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+            </div>
+        </a>
+    </div>
+</section>
+
+<section role="second-second">
+
+    <!-- ใช้ flex หรืออะไรก็ได้คั่นหัวข้อเพื่อใช้ Pattern เดิมในหัวข้อใหม่-->
+    <span>Second section</span>
+
+    <section role="second-section">
+        <div class="grid-container-second">
+            <a href="#">
+                <div class="grid-items content-second">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%"
+                            height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="grid-items content-second">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%"
+                            height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a><a href="#">
+                <div class="grid-items content-second">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%"
+                            height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a><a href="#">
+                <div class="grid-items content-second">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%"
+                            height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+
+    <span>Thrid-section</span>
+
+    <section role="thrid-section">
+        <div class="grid-container">
+
+            <div class="grid-items-top top-topic">
+
+                <div class="top-pic"> <img src="https://picsum.photos/500/500  " alt="top-photo" width="100%"
+                        height="100%"> </div>
+                <div class="top-content">Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                <div class="top-content2">Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                <div class="top-content3">Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+            </div>
+
+            <a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%"
+                            height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%"
+                            height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%"
+                            height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%"
+                            height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%"
+                            height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%"
+                            height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%"
+                            height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%"
+                            height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a>
+        </div>
+
+    </section>
+
+    <span> fourth section</span>
+    <section role="fourth-section">
+        <div class="grid-container-fourth">
+
+
+            <div class="grid-items-top top-topic">
+
+                <div class="top-pic"> <img src="https://picsum.photos/500/500  " alt="top-photo" width="100%"
+                        height="100%"> </div>
+                <div class="top-content">Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                <div class="top-content2">Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                <div class="top-content3">Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+
+
+
+            </div>
+
+            <a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%"
+                            height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%"
+                            height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%"
+                            height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%"
+                            height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a>
+
+
+    </section>
+
+    <span>fifth-section</span>
+    <section role="fifth-section">
+
+        <div class="grid-container-fifth">
+
+
+            <div class="grid-items-top top-topic">
+
+                <div class="top-pic"> <img src="https://picsum.photos/500/500  " alt="top-photo" width="100%"
+                        height="100%"> </div>
+                <div class="top-content">Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                <div class="top-content2">Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                <div class="top-content3">Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+
+
+
+            </div>
+
+
+    </section>
+
+
+
+
+
+
+
+    <span>sixth section</span>
+    <section role="sixth-section">
+        <div class="grid-container-sixth">
+
+
+            <div class="grid-items-top top-topic">
+
+                <div class="top-pic"> <img src="https://picsum.photos/500/500  " alt="top-photo" width="100%"
+                        height="100%"> </div>
+                <div class="top-content">Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                <div class="top-content2">Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                <div class="top-content3">Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+
+
+
+            </div>
+
+
+
+
+            <a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%"
+                            height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%"
+                            height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%"
+                            height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%"
+                            height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a>
+
+    </section>
+    <span>seventh-section</span>
+
+    <section>
+        <div class="grid-container7">
+
+            <div class="top-topic7"><img src="https://picsum.photos/500/500  " alt="top-photo" width="100%"
+                    height="100%"> </div>
+            <div class="top-pic7">Topic:Lorem ipsum, dolor spmnt molestias unde sequi.</div>
+
+
+            <a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%"
+                            height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%"
+                            height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a><a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%"
+                            height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a><a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%"
+                            height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a><a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%"
+                            height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a><a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%"
+                            height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a><a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%"
+                            height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a><a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%"
+                            height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a><a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%"
+                            height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a>
+
+
+
+
+
+        </div>
+    </section>
+
+
+    <span>eighth-section</span>
+    <section role="top-stoty">
+        <div class="grid-container-8">
+
+
+            <a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%" height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%" height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%" height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%" height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%" height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%" height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%" height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="grid-items content">
+                    <div class="pic"> <img src="https://picsum.photos/500/500" alt="photo" width="100%" height="144px">
+                    </div>
+                    <div class="topic"> Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+                    <div class="time"> <time datetime="2020-01-01">1<sup>st</sup>January 2020</time> </div>
+                </div>
+            </a>
+        </div>
+    </section>
+    
+    <span>nineth-section</span>
+    <section role="nineth-section">
+        <div class="grid-container-9">
+    <div class="choice">1.Topic:Lorem ipsum, dolor spmnt molestias unde sequi.</div>
+    <div class="choice">2.Topic:Lorem ipsum, dolor spmnt molestias unde sequi.</div>
+    <div class="choice">3.Topic:Lorem ipsum, dolor spmnt molestias unde sequi.</div>
+    <div class="choice">4.Topic:Lorem ipsum, dolor spmnt molestias unde sequi.</div>
+    <div class="choice">5.Topic:Lorem ipsum, dolor spmnt molestias unde sequi.</div>
+</div>
+</section>
+
+<span>last-section</span>
+<section role="last-section"></section>
+
+<div class="last-container">
+<div class="contract">1.contract</div>
+<div class="contract">2.contract</div>
+<div class="contract">3.contract</div>
+</div>
+
+
+
+
+    </div>
+    
+</body>
+<footer>
+    <div class="grid-header">
+
+        <div class="banner">  <a href="#"> <img src="https://picsum.photos/210/64  " alt="top-photo" width="210"
+            height="64"> </a>  </div>
+        
+        </div>
+
+        <div class="grid-survey">
+
+        <div class="survey" style="color:white;"  >Question for survey</div>
+        <div class="info" style="color:white;"  >infomation</div>
+        <div class="info" style="color:white; " >infomation</div>
+        <div class="info" style="color:white;"  >infomation</div>
+        <div class="info" style="color:white;"  >infomation</div>
+        <div class="info" style="color:white;"  >infomation</div>
+        <div class="info" style="color:white;"  >infomation</div>
+        <div class="info" style="color:white;"  >infomation</div>
+        <div class="info" style="color:white;"  >infomation</div>
+        <div class="credit" style="color:white;"  >@License</div>
+
+          
+
+
+        </div>
+
+</footer>
+</html>
