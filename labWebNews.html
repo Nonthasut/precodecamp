@@ -1,6 +1,52 @@
+<!-- ลองพยายามทำเลียนแบบเท่าที่ทำได้ดู  พบ ว่าไม่เข้าใจถึงแก่นหลายจุด -->
 <!-- หน้าเว็บหลักของ https://www.bbc.com/thai (เว็บข่าว) -->
 <!-- เน้นการจัดโครงไม่ได้ลงใน detail ,ละการตกแต่งปลีกย่อย , 
     ใช้สีกับขอบเพื่อง่ายต่อการดูขอบเขต ,ยังไม่แน่ใจเรื่องการใช้ flex, responsive ยังไม่เป็น -->
+
+
+    <!-- "คำตอบ"
+จากเว็บต้นฉบับใช้ Pattern คล้ายๆเดิมสลับตำแหน่งกับเพิ่มจำนวนหรือลดจำนวน element ต่างๆเฉยๆโดยจะแบ่ง section เป็นส่วนๆเอา
+จากการวิเคราะห์พบว่ามีลักษณะโดยหลักๆดังนี้
+
+1. ส่วนของ banner แบ่งออกเป็น 2 ส่วน
+-Logo banner (ใช้ flex ง่ายต่อการทำ)
+- nav bar 
+
+2. sectionเนื้อข่าวแบ่งเป็น 8 ส่วนทีเป็นเนื้อข่าวเป็นการ recycle Pattern ของ section ที่ 1 เป็นต้นแบบ
+
+pattern ถ้าใช้ grid จะง่ายต่อการจัดวางสลับตำแหน่งได้สะดวกในการสลับตำแหน่งเพิ่มลด column และ row 
+
+
+ลำดับ Pattern สำหรับเนื้อข่าวหลัก เป็นดังนี้
+[pic][pic][content][content]
+[pic][pic][content][content]
+[small-content][small-content][small-content][small-content]
+[small-content][small-content][small-content][small-content]
+......
+[small-content] : ภายในกล่อง แบ่งเป็นสามส่วน รูปภาพ,เนื้อหา,วันที่
+.......
+
+3.ในเนื้อหาแต่ละ section เนื้อข่าวเป็นการสลับตำแหน่งและลด element บางตัวเท่านั้น
+
+4.เนื้อหาใช้ลิงค์แบ่งเป็นหัวข้อต่างๆจัดวางด้วยตาราง col=2 row=3 ได้ ใช้ในการสร้าง contentลิ้งค์ช่วง section ที่ 8 และ9 ,footer
+
+-Logo banner (ใช้ flex ง่ายต่อการทำ)
+- nav bar 
+- section เนื้อข่าว
+-หัวข้อคั่น section  
+- section เนื้อข่าว
+-หัวข้อคั่น section 
+....(เนื้อข่าวมี 8 section)
+-หัวข้อคั่น
+-content เพื่อเชื่อมไปเนื้อหา
+-หัวข้อคั่น
+-content เพื่อเชื่อมไปเนื้อหา
+-banner
+-footer -->
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -516,9 +562,9 @@ https://picsum.photos/200/300 -->
 
             <div class="top-pic"> <img src="https://picsum.photos/500/500  " alt="top-photo" width="100%"
                     height="100%"> </div>
-            <div class="top-content">Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
-            <div class="top-content2">Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
-            <div class="top-content3">Topic:Lorem ipsum, dolor spmnt molestias unde sequi. </div>
+            <div class="top-content"> ผมนึกสนุกอยากทดลองสร้างโครงสร้างเรียนแบบเท่าที่รู้ดูครับ (P.s.คำตอบวิเคราะห์โครงสร้างอยู่ในคอมเม้นของ code นะครับ) </div>
+            <div class="top-content2"> ผมนึกสนุกอยากทดลองสร้างโครงสร้างเรียนแบบเท่าที่รู้ดูครับ (P.s.คำตอบวิเคราะห์โครงสร้างอยู่ในคอมเม้นของ code นะครับ) </div>
+            <div class="top-content3"> ผมนึกสนุกอยากทดลองสร้างโครงสร้างเรียนแบบเท่าที่รู้ดูครับ (P.s.คำตอบวิเคราะห์โครงสร้างอยู่ในคอมเม้นของ code นะครับ) </div>
 
 
 
