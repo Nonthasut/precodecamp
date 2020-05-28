@@ -1,6 +1,29 @@
 
-<!-- โจทย์คือให้ออกแบบเองไม่ใช่เลียนแบบพยายามเลียนแบบ : ทดลองใช้ flex ยังไม่คล่องแถมสับสนพอสมควรในประเด็นของการใช้ container , 
-    ยังทำ reponsive ไม่เป็น ไอเดียเว็บมาจาก shoppee.com -->
+<!-- พยายาม ทดลองใช้ flex ยังไม่คล่องแถมสับสนพอสมควรในประเด็นของการใช้ container , 
+    ยังทำ reponsive ไม่เป็น ไอเดียเว็บมาจาก shoppee.com ยังไม่เข้าใจในเรื่องการซ้อนทันของ container แต่สามารถจัดการเรื่อง flex โดยยังคงสถานะ position fixed ให้ทำงานร่วมกันได้(ปกติไม่ได้)-->
+    <!-- ทำไม่เสร็จครับใช้เวลามากเกินไปเลยตัดสินใจทำง่ายๆแทนเพื่อที่จะได้เริ่มเขยายขอบเขตความรู้มากขึ้นเพื่อที่จะได้ย้อนกลับมาแก้ส่วนที่ติดตอนนี้ได้ -->
+    <!-- เว็บมาจาก shoppee.com  -->
+
+    <!-- คำตอบ -->
+    <!-- โครงสร้างหลัก
+    หัวเว็บใช้การจัดวางแบบ flex ในการจัดเรียง
+    หัวข้อ1-3แยก container โดยมช้ flex ในการสร้างและวางตำแหน่ง
+    1. navbar customer support + login bar
+    2.banner-header + searchbar
+    3.top-topic + nav finance
+    
+    ตั้งแต่หัวข้อที่ 4 ลงไปจะเป็นการรวม conntainer ด้วยกัน
+    4.banner
+    5.category section
+    6.announcement section
+    ส่วนใหญ่ของหน้าเว็บคือหัวข้อที่ 7 เป็นการนำ flex เรียงตัวกันเป็นระเบียบเพื่อนำเสนอสินค้าแก่ผู้ใช้งาน
+    7.announcement-banner
+    8.product-avertisement
+    9.footer
+     -->
+    
+
+
 
     <!DOCTYPE html>
     <html lang="en">
@@ -182,7 +205,10 @@
     </div>
     
     <div class="first-topic">
-        <div class="first-banner">Recomment product for today (animation transform new link every 5sec.)</div>
+        <div class="first-banner">Recomment product for today (animation transform new link every 5sec.)
+            คำตอบอยู่ในคอมเม้นท์ของ code ครับ (พยายามสร้างเลียนแบบครับแต่รู้สึกว่าใช้เวลามากเกินไปจนใช้เวลาสร้างมากเกินจำเป็นจนไม่ได้ใช้เวลาหาความรู้ให้กว้างขึ้นดังนั้นขอลองทำแบบง่ายๆไปก่อนเพื่อทำ project อื่นก่อนนะครับ)
+            (รอวันเปิดแคมป์เพื่อเรียนรู้จากอาจาร์ยหลายๆส่วนครับขอใช้เวลาให้กว้างขึ้นก่อนช่วง precamp)
+        </div>
         <div class="next-page">
         <div> <a href="#"> 1 </a></div>
         <div> <a href="#"> 2 </a></div>
